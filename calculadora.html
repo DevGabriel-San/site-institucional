@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+    <div class="header">
+        <div class="container">
+            <h1>Versão Em Andamento</h1>
+            <ul class="navbar">
+               <li class="active"> <a href="meusite.html">Início</a> </li>
+               <li class="active"> <a href="calculadora.html">Simulador</a> </li>
+               <li class="active" >|</li>
+               <li class="active" ><a href="logiin.html">Login</a></li>
+              <li class="active" > <a href="Cadastro.html">Cadastro</a>  </li>
+            </ul>
+        </div>
+    </div>
+
+  <div class="bannerCalculadora">
+    <div style="margin: 10%;">
+      <div id="div">  <h2>Simule aqui o valor total perdido</h2> </div>
+        
+        <b>Quantidade de sacas de café perdidos por ano</b>  <input id="primeiro" ><br> <br>
+        <br><div id="div_pre" ></div>
+        <br>
+        <br><button onclick="concluir()" style="background-color: lightsalmon; width: 3cm;height: 1cm;" >Concluir</button>
+        <button onclick="voltar()" style="background-color: lightsalmon; width: 3cm;height: 1cm;" >Voltar</button>
+       
+        
+        
+        
+        
+        
+        
+        <h2>Faça aqui seu orçamento</h2> <br>
+        
+        
+      
+     
+         <div><img  src="https://5.imimg.com/data5/DJ/OS/ND/SELLER-73632687/dht11-sensor-500x500.jpg" width="150px"> <p style="margin-right: 75%; float: right;" > <b>Sensor DHT11  PREÇO R$ 14,99</b>  </p> </div>    <div style="margin-right: 50%; float: left;" id="pedido_dois" ></div>
+        <br><br><input  id="qtd_sensor"  placeholder="Quantidade de Sensores" > 
+        
+        <br><br><button onclick="finalizar()" style="background-color: lightsalmon; width: 3cm;height: 1cm;" >Finalizar Pedido</button><br><br>
+        
+        
+        
+        
+        </div>
+  </div>
+
+
+  <div class="footer">
+    <p>Direitos Reservados - COFFE ANALYTICS - © 2021  </p>
+</div>
+</body>
+</html>
+<script>
+    function concluir(){
+div_pre.style.display = 'block'
+div.style.display = 'none'
+var multiplica = Number(primeiro.value) * 1250 ;
+div_pre.innerHTML = `<b>voce perdeu R$ ${multiplica} reais em sacas de café, Na Zona da Mata Mineira cerca de 500 hectares de lavoura de café arábica, o equivalente a 15 mil sacas, foram perdidos totalmente em decorrência do deslizamento de terras, milhares de cafés são perdidos por conta de intempéries climaticas </b>`;
+
+}
+function voltar(){
+div_pre.style.display = 'none'
+primeiro.value = ''
+}
+
+
+
+
+
+
+
+
+
+function finalizar(){
+
+
+
+
+    var total_pedido =  Number( qtd_sensor.value * 15 )
+    pedido_dois.innerHTML = `  <b> <i> 
+         ${qtd_sensor.value} sensores DHT11 no valor total de R$${total_pedido} reais <br> Coffe Analytics Agradece <br></b> </i>`
+}
+
+
+
+
+    
+
+
+
+</script>
+
+
+
